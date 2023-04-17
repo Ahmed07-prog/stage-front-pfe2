@@ -1,0 +1,24 @@
+<mat-card>
+    <form  #f="ngForm"
+    (ngSubmit)="onSend()">
+        <div class="form-group">
+            <label for="email">Envoyer Votre Email</label>
+            <input
+              type="text"
+              class="form-control"
+              name="email"
+              [(ngModel)]="form.email"
+              required
+              #email="ngModel"
+              
+            />
+            <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
+              email is required!
+            </div>
+          </div>
+          <button mat-raised-button>Envoyer</button>
+          <div class="alert alert-success" *ngIf="sent">
+            Email envoyee avec succes.
+          </div>
+    </form>
+</mat-card>

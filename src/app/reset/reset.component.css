@@ -1,0 +1,17 @@
+mat-card{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    margin-top: 75px;
+}
+input{
+    width: 90%;
+    margin: auto;
+}
+label{
+    margin-left: 35px;
+}
+button{
+    margin: auto;
+    display: flex;
+}

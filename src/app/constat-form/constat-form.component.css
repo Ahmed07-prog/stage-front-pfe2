@@ -1,0 +1,21 @@
+.mat mat-form-field{
+    width: 100%;
+}
+.cards {
+  display: flex;
+}
+
+.mat-card {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+    .cards {
+      flex-direction: column; /* Stack cards vertically */
+    }
+    
+    .mat-card {
+      margin-right: 0; /* Remove margin between cards */
+      margin-bottom: 20px; /* Add margin between cards */
+      width: 100%; /* Set cards to full width */
+    }
+  }
