@@ -23,7 +23,8 @@ export class ForgotService {
 
   sendReset(password:string):Observable<any>{
     return this.http.post(FORGOT_API + 'reset?token=' + this.storage.getResetToken() ,{
-      password
+      password,
+     
     },
     httpOptions)
   }

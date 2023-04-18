@@ -9,9 +9,6 @@ import { User } from '../models/User';
   styleUrls: ['./board-admin.component.css']
 })
 export class BoardAdminComponent implements OnInit {
-  content?: string;
-
-
   users: User[] = [];
 
   constructor(private apiservice: ApiServicesService) { }
@@ -19,6 +16,7 @@ export class BoardAdminComponent implements OnInit {
   
   getUserDetails(): void {
     this.apiservice.getAllUsers().subscribe(user => {
+      console.log(user)
       this.users = user;
     });
   }

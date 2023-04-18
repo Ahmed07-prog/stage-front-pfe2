@@ -12,10 +12,9 @@ export class HttpRequestInterceptor implements HttpInterceptor {
     if (jwt) {
       req = req.clone({
         withCredentials: true,
-        headers: new HttpHeaders({
-          'Authorization': `Bearer ${jwt}`
-        })
+        'Authorization':'Bearer ' + jwt;
       });
+      console.log(req)
     } else {
       req = req.clone({ withCredentials: true });
     }

@@ -21,12 +21,9 @@ onReset():void{
   const {newPassword, cnfrPassword} = this.form;
   if (newPassword == cnfrPassword){
     this.forgot.sendReset(cnfrPassword).subscribe({
-      next: data => {
-        console.log(cnfrPassword);
-        if (data){
-          this.sent = true;
+      next: () => {
         this.router.navigate(['/login'])
-        }
+        
         
       },
       error:err => {

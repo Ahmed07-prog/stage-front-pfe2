@@ -36,8 +36,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider'
 import {FormlyBootstrapModule} from '@ngx-formly/bootstrap'
 import { FormlyModule } from '@ngx-formly/core';
-import { ResetComponent } from './reset/reset.component';
+import { resetComponent } from './reset/reset.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AddExpertComponent } from './add-expert/add-expert.component';
 
 
 @NgModule({
@@ -53,8 +54,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     ConstatFormComponent,
     ConstatPDFComponent,
     HistoricConstatComponent,
-    ResetComponent,
-    ResetPasswordComponent
+    resetComponent,
+    ResetPasswordComponent,
+    AddExpertComponent
   ],
   imports: [
     BrowserModule,
@@ -86,6 +88,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
         { name: 'required', message: 'This field is required' },
       ],
     }),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

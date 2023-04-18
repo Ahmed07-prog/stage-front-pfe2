@@ -10,7 +10,7 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import {HistoricConstatComponent} from './historic-constat/historic-constat.component'
 import {ConstatFormComponent} from './constat-form/constat-form.component'
-import { ResetComponent } from './reset/reset.component';
+import { resetComponent } from './reset/reset.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path : 'constat', component: ConstatFormComponent},
   { path : 'historic', component: HistoricConstatComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path : 'reset', component: ResetComponent  },
+  { path : 'reset', component: resetComponent  },
   {path:'resetPassword',component: ResetPasswordComponent}
   
 ];

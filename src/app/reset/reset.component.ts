@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './reset.component.html',
   styleUrls: ['./reset.component.css']
 })
-export class ResetComponent {
+export class resetComponent {
   failed =false;
   sent =false;
   errorMessage ='';
