@@ -8,13 +8,14 @@ export class HttpRequestInterceptor implements HttpInterceptor {
     
     const jwt = sessionStorage.getItem('access_token');
 
-   
     if (jwt) {
       req = req.clone({
         withCredentials: true,
-        'Authorization':'Bearer ' + jwt;
+        setHeaders:{
+           Authorization: `Bearer ${jwt}`
+        }
       });
-      console.log(req)
+      
     } else {
       req = req.clone({ withCredentials: true });
     }

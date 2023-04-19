@@ -1,6 +1,7 @@
-<div class="container">
-    <header class="jumbotron">
-      <p>Home</p>
-    </header>
-  </div>
-  
+<ul>
+  <li *ngFor="let constat of constats">
+    ID: {{constat.constat_id}}<br>
+    Place: {{constat.constat_place}}<br>
+    Date: {{constat.constat_date}}
+  </li>
+</ul>

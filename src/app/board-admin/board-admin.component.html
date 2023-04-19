@@ -1,1 +1,119 @@
-<app-add-expert></app-add-expert>
+<div class="container">
+  <div class="row">
+      <div class="col-lg-12 card-margin">
+          <div class="card search-form">
+              <div class="card-body p-0">
+                  <form id="search-form">
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="row no-gutters">
+                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                      <select class="form-control" id="exampleFormControlSelect1">
+                                          <option>Location</option>
+                                          <option>London</option>
+                                          <option>Boston</option>
+                                          <option>Mumbai</option>
+                                          <option>New York</option>
+                                          <option>Toronto</option>
+                                          <option>Paris</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                      <input type="text" placeholder="Search..." class="form-control" id="search" name="search">
+                                  </div>
+                                  <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                      <button type="submit" class="btn btn-base">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+          <div class="col-lg-9 mb-3">
+              <div class="card card-margin">
+                  <div class="card-body">
+                      <div class="row search-body">
+                          <div class="col-lg-12">
+                              <div class="search-result">
+                                  <div class="result-header">
+                                      <div class="row">
+                                          <div class="col-lg-6">
+                                              <div class="result-actions">
+                                                  <div class="result-sorting">
+                                                      <span>Sort By:</span>
+                                                      <select class="form-control border-0" id="exampleOption">
+                                                          <option value="1">Relevance</option>
+                                                          <option value="2">Names (A-Z)</option>
+                                                          <option value="3">Names (Z-A)</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="result-body">
+                                      <div class="table-responsive">
+                                          <table *ngFor="let profile of profiles" class="table widget-26">
+                                              <tbody>
+                                                  <tr>
+                                                      <td>
+                                                          <div class="widget-26-job-emp-img">
+                                                              <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="widget-26-job-title">
+                                                              <p href="#">{{profile.nom}}</p>
+                                                              <p class="m-0"><span class="text-muted time">{{profile.addTime}} days ago</span></p>
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="widget-26-job-info">
+                                                              <p class="type m-0">{{profile.time}}</p>
+                                                              <p class="text-muted m-0">in <span class="location">{{profile.lieu}}</span></p>
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <button mat-raised-button color="primary">voir Constat</button>
+                                                      </td>
+                                                      <td>
+                                                          <button mat-raised-button >Voir note expert</button>
+                                                      </td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class=" col-lg-3 mb-4 mb-lg-0 px-lg-0 mt-lg-0">
+            <mat-card>
+              <div style="visibility: hidden; display: none; width: 285px; height: 801px; margin: 0px; float: none; position: static; inset: 85px auto auto;"></div><div data-settings="{&quot;parent&quot;:&quot;#content&quot;,&quot;mind&quot;:&quot;#header&quot;,&quot;top&quot;:10,&quot;breakpoint&quot;:992}" data-toggle="sticky" class="sticky" style="top: 85px;"><div class="sticky-inner">
+                <div class="bg-white mb-3">
+                  <h2 class="px-3 py-4 op-5 m-0">
+                    Liste Expert
+                  </h2>
+                  <div class="expert pos-relative px-3 py-3">
+                    <h6 class="text-primary text-sm">
+                      expert
+                    </h6>
+                  </div>
+                  <hr class="m-0">
+                </div>
+                <a routerLink="" class="btn  btn-block btn-success rounded-0 py-4 mb-3 bg-op-6 roboto-bold" href="#">Ajouter un Expert +</a>
+
+              </div>
+            </div>
+          </mat-card>
+        </div>
+  </div>
